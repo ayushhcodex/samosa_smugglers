@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samosa Smugglers™️ - Best Samosa in Ghaziabad | P-Block Sanjay Nagar</title>
+    <meta name="description" content="Smuggle The Crunch! Premium samosas in Ghaziabad. Aloo, Cheese, Paneer varieties. Order now from P-Block Sanjay Nagar Sector 23. Fresh daily preparation.">
+    <meta name="keywords" content="Best Samosa in Ghaziabad, Samosa Delivery Ghaziabad P-Block, Samosa Sanjay Nagar, Cheese Samosa Ghaziabad, Samosa Sector 23">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --purple: #7B3FF2;
+            --gold: #FFD700;
+            --dark-bg: #0a0a0a;
+            --dark-secondary: #1a1a1a;
+            --orange-cta: #FF6B35;
+            --text-light: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        body.light-mode {
+            --dark-bg: #ffffff;
+            --dark-secondary: #f5f5f5;
+            --text-light: #1a1a1a;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--purple), #5a2db8);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(123, 63, 242, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .theme-toggle {
+            background: var(--gold);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--purple);
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%237B3FF2" width="1200" height="600"/><path fill="%23FFD700" opacity="0.1" d="M0,300 Q300,150 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🥟';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 3px 3px 6px rgba(255,215,0,0.5); }
+            50% { text-shadow: 3px 3px 20px rgba(255,215,0,0.8); }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange-cta), #ff8555);
+            color: white;
+            box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,107,53,0.6);
+        }
+
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--purple);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 1rem 0;
+            animation: pulse 2s infinite;
+        }
+
+        .open {
+            background: #22c55e;
+            color: white;
+        }
+
+        .closed {
+            background: #ef4444;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--purple);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* Menu Carousel */
+        .menu-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .menu-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .menu-carousel::-webkit-scrollbar-track {
+            background: var(--dark-secondary);
+            border-radius: 10px;
+        }
+
+        .menu-carousel::-webkit-scrollbar-thumb {
+            background: var(--purple);
+            border-radius: 10px;
+        }
+
+        .menu-item {
+            min-width: 280px;
+            background: var(--dark-secondary);
+            border-radius: 20px;
+            padding: 1.5rem;
+            scroll-snap-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .menu-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(123,63,242,0.3);
+        }
+
+        .menu-item-icon {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            color: var(--text-light);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-content {
+            background: var(--dark-secondary);
+            padding: 2rem;
+            border-radius: 20px;
+            border-left: 5px solid var(--gold);
+        }
+
+        .badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .badge {
+            background: var(--purple);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Map */
+        .map-container {
+            margin: 2rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Contact Form */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: var(--dark-secondary);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--orange-cta);
+        }
+
+        form {
+            background: var(--dark-secondary);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 2px solid var(--purple);
+            background: var(--dark-bg);
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Instagram Section */
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .insta-post {
+            background: var(--dark-secondary);
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .insta-post:hover {
+            transform: scale(1.05);
+        }
+
+        .insta-post::before {
+            content: '📸';
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        /* Bulk Order CTA */
+        .bulk-order-cta {
+            background: linear-gradient(135deg, var(--purple), #5a2db8);
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 15px 40px rgba(123,63,242,0.4);
+        }
+
+        .bulk-order-cta h3 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Challenge Section */
+        .challenge-box {
+            background: linear-gradient(135deg, var(--orange-cta), #ff8555);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenge-box::before {
+            content: '🔥';
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            right: -2rem;
+            top: -2rem;
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+            cursor: pointer;
+            z-index: 999;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .whatsapp-sticky:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-secondary);
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            font-size: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .menu-item {
+                min-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Samosa Smugglers™️</div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🥟 Smuggle The Crunch! 🥟</h1>
+            <p>Ghaziabad ka sabse crispy aur tasty samosa experience!</p>
+            <div id="status"></div>
+            <div class="cta-buttons">
+                <a href="#menu" class="btn btn-primary">View Full Menu</a>
+                <a href="https://wa.me/919667790333?text=Hi!%20I%20want%20to%20pre-order%20samosas" class="btn btn-secondary" target="_blank">WhatsApp Pre-Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Smuggled Specialties</h2>
+        <div class="menu-carousel">
+            <div class="menu-item">
+                <div class="menu-item-icon">🥔</div>
+                <h3>Classic Aloo Samosa</h3>
+                <p>Mitti ki khushboo, chai ka sukoon - our OG recipe that started it all. Golden crispy perfection!</p>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon">🧀</div>
+                <h3>Cheese & Corn Blast</h3>
+                <p>Cheesy, gooey, absolutely irresistible! Trending on our Instagram for a reason.</p>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon">🌶️</div>
+                <h3>Paneer Tikka Samosa</h3>
+                <p>Spicy paneer tikka stuffing in crispy layers. Shakahari heaven!</p>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon">🍄</div>
+                <h3>Paneer Mushroom Mix</h3>
+                <p>Fancy meets desi! Our premium fusion specialty.</p>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon">✨</div>
+                <h3>Special Varieties</h3>
+                <p>Ask us about seasonal specials and limited edition flavors!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section>
+        <div class="challenge-box">
+            <h2 style="color: white; margin-bottom: 1rem;">🔥 The Samosa Challenge 🔥</h2>
+            <p style="font-size: 1.2rem; color: white;">Can you finish 10 samosas in 10 minutes? Win prizes and Instagram fame! DM us to participate.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Different Varieties Specialty</h2>
+        <div class="about-content">
+            <h3 style="color: var(--gold); margin-bottom: 1rem;">Hamari Kahani</h3>
+            <p style="line-height: 1.8; margin-bottom: 1.5rem;">
+                P-Block Sanjay Nagar mein shuruaat hui thi, ek simple sapne ke saath - Ghaziabad ko India's crispiest samosas dena. 
+                Every single samosa is made fresh daily with premium ingredients, proper hygiene, and lots of love. 
+                No compromises, no shortcuts - bas authentic taste aur perfect crunch!
+            </p>
+            <p style="line-height: 1.8;">
+                From students to families, office parties to shaadi functions - we've smuggled smiles across thousands of plates. 
+                Join the Samosa Smugglers family today! 🥟✨
+            </p>
+            
+            <div class="badges">
+                <div class="badge">✅ Fresh Daily Prep</div>
+                <div class="badge">🧼 Hygienic Kitchen</div>
+                <div class="badge">🌟 Premium Quality</div>
+                <div class="badge">📱 Trending on Insta</div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.123!2d77.4579!3d28.6789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQwJzQ0LjAiTiA3N8KwMjcnMjguNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Bulk Order CTA -->
+    <section>
+        <div class="bulk-order-cta">
+            <h3>🎉 Bulk Order for Your Event? 🎉</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                Birthday parties, office meetings, shaadi functions - we've got you covered! 
+                Special discounts on bulk orders. Let's make your event delicious!
+            </p>
+            <a href="https://wa.me/919667790333?text=Hi!%20I%20need%20bulk%20order%20for%20an%20event" class="btn btn-secondary" target="_blank">Contact for Bulk Orders</a>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram">
+        <h2>📸 Follow The Crunch on Insta</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">
+            <a href="https://instagram.com/samosa_smugglers" target="_blank" style="color: var(--gold); font-size: 1.3rem; text-decoration: none;">
+                @samosa_smugglers
+            </a>
+        </p>
+        <div class="instagram-grid">
+            <div class="insta-post"></div>
+            <div class="insta-post"></div>
+            <div class="insta-post"></div>
+            <div class="insta-post"></div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://instagram.com/samosa_smugglers" class="btn btn-primary" target="_blank">See More Reels</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch - Order Karo!</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3 style="color: var(--gold); margin-bottom: 1.5rem;">Contact Details</h3>
+                <div class="contact-item">
+                    <span>📞</span>
+                    <a href="tel:+919667790333">+91 96677 90333</a>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>P-Block Sanjay Nagar, Sector 23, Ghaziabad</span>
+                </div>
+                <div class="contact-item">
+                    <span>⏰</span>
+                    <span>12:00 PM - 9:30 PM (Daily)</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="https://instagram.com/samosa_smugglers" target="_blank">@samosa_smugglers</a>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="https://www.zomato.com" class="btn btn-secondary" target="_blank">Order on Zomato</a>
+                </div>
+            </div>
+
+            <form onsubmit="handleSubmit(event)">
+                <h3 style="color: var(--gold); margin-bottom: 1.5rem;">Quick Inquiry</h3>
+                <div class="form-group">
+                    <label>Naam:</label>
+                    <input type="text" required placeholder="Apna naam likho">
+                </div>
+                <div class="form-group">
+                    <label>Order Quantity:</label>
+                    <input type="number" min="1" required placeholder="Kitne samose chahiye?">
+                </div>
+                <div class="form-group">
+                    <label>Date/Time:</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea placeholder="Koi special request? Batao!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/samosa_smugglers" target="_blank">📷</a>
+            <a href="https://wa.me/919667790333" target="_blank">💬</a>
+            <a href="https://www.zomato.com" target="_blank">🍽️</a>
+        </div>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2025 Samosa Smugglers™️ - Smuggle The Crunch!</p>
+        <p style="margin-top: 0.5rem; opacity: 0.6;">P-Block Sanjay Nagar, Sector 23, Ghaziabad</p>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/919667790333?text=Hi!%20I%20want%20to%20order%20samosas" class="whatsapp-sticky" target="_blank">
+        💬
+    </a>
+
+    <script>
+        // Check if shop is open
+        function updateStatus() {
+            const now = new Date();
+            const hours = now.getHours();
+            const statusDiv = document.getElementById('status');
+            
+            if (hours >= 12 && hours < 21) {
+                statusDiv.innerHTML = '<div class="status-badge open">🟢 Open Now - Order Karo!</div>';
+            } else if (hours >= 21 && hours < 22) {
+                statusDiv.innerHTML = '<div class="status-badge open">🟡 Closing Soon (9:30 PM)</div>';
+            } else {
+                statusDiv.innerHTML = '<div class="status-badge closed">🔴 Closed - Opens at 12 PM</div>';
+            }
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const btn = document.querySelector('.theme-toggle');
+            btn.textContent = document.body.classList.contains('light-mode') ? '🌙' : '🌓';
+        }
+
+        // Form Submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Inquiry received! Hum aapko jaldi contact karenge. Meanwhile, WhatsApp pe bhi message kar sakte ho! 🥟');
+            e.target.reset();
+        }
+
+        // Initialize
+        updateStatus();
+        setInterval(updateStatus, 60000); // Update every minute
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Schema Markup
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "Samosa Smugglers",
+            "image": "https://example.com/logo.jpg",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "P-Block Sanjay Nagar",
+                "addressLocality": "Ghaziabad",
+                "addressRegion": "Uttar Pradesh",
+                "postalCode": "201002",
+                "addressCountry": "IN"
+            },
+            "telephone": "+919667790333",
+            "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 12:00-21:30",
+            "servesCuisine": "Indian Street Food",
+            "priceRange": "₹"
+        };
+    </script>
+</body>
+</html>q
